@@ -3,16 +3,20 @@ package Client.View.Chat;
 import Client.Core.ModelFactory;
 //import TransferObjects.Message;
 import Client.Model.ModelInterface;
+import SharedResources.Message;
+import javafx.collections.ObservableList;
 
 import java.util.GregorianCalendar;
 
 public class ChatViewModel
 {
   private ModelInterface modelInterface;
+  private ObservableList<Message> messages;
 
   public ChatViewModel(ModelInterface modelInterface)
   {
     this.modelInterface=modelInterface;
+
   }
 
   public void sendMessage(String text, String user)
