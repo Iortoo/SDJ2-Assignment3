@@ -28,8 +28,8 @@ public class ChatViewController implements ViewController
     this.viewHandler = viewHandler;
     this.username.setText(username);
     this.chatViewModel=viewModelFactory.getChatViewModel();
-    chatViewModel.showMessages();
-    messagesListView.setItems(chatViewModel.getMessages());
+    chatViewModel.loadMessages();
+    messagesListView.setItems(chatViewModel.showMessages());
   }
 
   public void onSendButton()

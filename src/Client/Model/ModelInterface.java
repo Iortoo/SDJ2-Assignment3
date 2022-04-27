@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface ModelInterface extends Subject
 {
-  void send();
-  List<Message> getMessage();
+  void send(Message message);
+  List<Message> receive();
 
 }
