@@ -20,6 +20,7 @@ public class ChatViewController implements ViewController
   @FXML ListView messagesListView;
   public void init(ViewHandler viewHandler, ViewModelFactory viewModelFactory)
   {
+
   }
 
   public void initPlus(ViewHandler viewHandler,ViewModelFactory viewModelFactory, String username)
@@ -27,6 +28,8 @@ public class ChatViewController implements ViewController
     this.viewHandler = viewHandler;
     this.username.setText(username);
     this.chatViewModel=viewModelFactory.getChatViewModel();
+    chatViewModel.showMessages();
+    messagesListView.setItems(chatViewModel.getMessages());
   }
 
   public void onSendButton()

@@ -1,4 +1,4 @@
-package Client.Model;
+package SharedResources;
 
 public class Message
 {
