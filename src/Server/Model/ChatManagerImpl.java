@@ -14,7 +14,7 @@ public class ChatManagerImpl implements ChatManager, Serializable
   private List<Message> messageList;
   private PropertyChangeSupport support;
 
-  private ChatManagerImpl() throws RemoteException{
+  public ChatManagerImpl() throws RemoteException{
      messageList = new ArrayList<>();
      support = new PropertyChangeSupport(this);
   }

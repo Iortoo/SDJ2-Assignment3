@@ -1,8 +1,11 @@
 package SharedResources.networking.clientSide;
 
+import SharedResources.Message;
+
+import java.rmi.Remote;
 import java.rmi.RemoteException;
 
-public interface ClientCallBack
+public interface ClientCallBack extends Remote
 {
-  String getUsername() throws RemoteException;
+  void updateChat(Message message) throws RemoteException;
 }
