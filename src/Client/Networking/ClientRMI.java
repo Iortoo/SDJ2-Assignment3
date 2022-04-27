@@ -33,28 +33,37 @@ public class ClientRMI implements Client, ClientCallBack
 
   @Override public void send(Message message)
   {
+    try{
+      server.getChatServer().transmitMessage(message);
+    }
+    catch(RemoteException e){}
 
   }
 
   @Override public List<Message> receive()
   {
+    try{
+      return server.getChatServer().getMessages();
+    }
+    catch (RemoteException e){}
     return null;
   }
 
-  @Override public boolean connectionPossible()
-  {
-    return false;
-  }
 
   @Override public void addListener(String event,
       PropertyChangeListener listener)
   {
-
+    support.addPropertyChangeListener(event,listener);
   }
 
   @Override public void removeListener(String event,
       PropertyChangeListener listener)
   {
+    support.removePropertyChangeListener(event,listener);
+  }
 
+  @Override public void updateChat(Message message) throws RemoteException
+  {
+    support.firePropertyChange("newMessage",null, message);
   }
 }

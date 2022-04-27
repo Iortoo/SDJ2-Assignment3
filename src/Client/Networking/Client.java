@@ -9,5 +9,4 @@ public interface Client extends Subject
 {
   void send(Message message);
   List<Message> receive();
-  boolean connectionPossible();
 }
