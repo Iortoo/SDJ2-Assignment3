@@ -1,7 +1,9 @@
-package Server.Networking;
+package Server;
 
 import Server.Model.ChatManager;
 import Server.Model.ChatManagerImpl;
+import Server.Networking.ChatServerImpl;
+import Server.Networking.ServerImpl;
 import SharedResources.networking.serverSide.ChatServer;
 import SharedResources.networking.serverSide.Server;
 

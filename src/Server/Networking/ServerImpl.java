@@ -17,7 +17,7 @@ public class ServerImpl implements Server
   private ChatServer chatServer;
   private List<ClientCallBack> clients;
 
-  ServerImpl(ChatServer chatServer) throws RemoteException
+  public ServerImpl(ChatServer chatServer) throws RemoteException
   {
     this.chatServer = chatServer;
     UnicastRemoteObject.exportObject(this, 0);
