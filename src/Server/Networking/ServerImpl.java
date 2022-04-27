@@ -1,5 +1,5 @@
 package Server.Networking;
 
-public class ChatServer
+public class ServerImpl
 {
 }
