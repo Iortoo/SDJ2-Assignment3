@@ -14,18 +14,8 @@ public class Message implements Serializable
     this.from=from;
   }
 
-  public String getText()
+  @Override public String toString()
   {
-    return text;
-  }
-
-  public String getDateTimeSent()
-  {
-    return dateTimeSent;
-  }
-
-  public String getFrom()
-  {
-    return from;
+    return "(" + dateTimeSent + ")  ψ(｀∇´)ψ" + from + "-> " + text;
   }
 }

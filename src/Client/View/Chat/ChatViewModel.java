@@ -26,6 +26,7 @@ public class ChatViewModel
 
   private void newMessage(PropertyChangeEvent e)
   {
+    System.out.println("Message received!" + (Message)e.getNewValue());
     Platform.runLater(()->{
       messages.add((Message) e.getNewValue());
         }
