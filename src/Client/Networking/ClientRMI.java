@@ -36,7 +36,7 @@ public class ClientRMI implements Client, ClientCallBack
     try{
       server.getChatServer().transmitMessage(message);
     }
-    catch(RemoteException e){}
+    catch(RemoteException e){System.out.println(e.getMessage());}
 
   }
 
