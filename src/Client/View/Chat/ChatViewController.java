@@ -6,6 +6,7 @@ import Client.View.ViewController;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 
 import javax.swing.text.View;
@@ -15,8 +16,8 @@ public class ChatViewController implements ViewController
   private ViewHandler viewHandler;
   private ChatViewModel chatViewModel;
   @FXML Label username;
-  @FXML TextArea messageArea;
-  @FXML TextArea receivedArea;
+  @FXML TextArea writeMessageTextArea;
+  @FXML ListView messagesListView;
   public void init(ViewHandler viewHandler, ViewModelFactory viewModelFactory)
   {
   }
@@ -30,13 +31,9 @@ public class ChatViewController implements ViewController
 
   public void onSendButton()
   {
-    chatViewModel.sendMessage(messageArea.getText(),username.getText());
-    messageArea.setText("");
+    chatViewModel.sendMessage(writeMessageTextArea.getText(),username.getText());
+    writeMessageTextArea.setText("");
   }
 
-  public void update(String message, String from, String dateTimeSent)
-  {
-    receivedArea.setText(receivedArea.getText()+from+" ("+dateTimeSent+"):\n"+message+"\n\n");
-    // WE'LL CALL THIS FUNCTION WHENEVER THE CLIENT RECEIVES A NEW MESSAGE
-  }
+
 }
