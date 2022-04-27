@@ -16,8 +16,8 @@ public class ChatServerImpl implements ChatServer
 
   public ChatServerImpl(ChatManager chatManager) throws RemoteException
   {
-    UnicastRemoteObject.exportObject(this, 0)
-    ;
+    this.chatManager = chatManager;
+    UnicastRemoteObject.exportObject(this, 0);
   }
 
   @Override public List<Message> getMessages() throws RemoteException

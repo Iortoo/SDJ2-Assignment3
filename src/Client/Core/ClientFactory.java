@@ -12,4 +12,6 @@ public class ClientFactory
     if(client==null)client= new ClientRMI();
     return client;
   }
+
+
 }

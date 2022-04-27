@@ -12,7 +12,8 @@ public class ChatApp extends Application
   @Override
   public void start(Stage stage) throws Exception
   {
-    ModelFactory modelFactory = new ModelFactory();
+    ClientFactory clientFactory = new ClientFactory();
+    ModelFactory modelFactory = new ModelFactory(clientFactory);
     ViewModelFactory viewModelFactory = new ViewModelFactory(modelFactory);
     ViewHandler viewHandler = new ViewHandler(stage,viewModelFactory);
     viewHandler.openUsernameView();
