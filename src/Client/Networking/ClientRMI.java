@@ -1,5 +1,5 @@
 package Client.Networking;
 
-public class ClientRMI
+public class ClientRMI implements Client
 {
 }

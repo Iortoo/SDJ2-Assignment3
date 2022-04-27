@@ -1,5 +1,5 @@
 package Client.Model;
 
-public class ModelInterfaceImpl
+public class ModelInterfaceImpl implements ModelInterface
 {
 }
