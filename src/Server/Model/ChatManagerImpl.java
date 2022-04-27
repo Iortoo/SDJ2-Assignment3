@@ -36,8 +36,8 @@ public class ChatManagerImpl implements ChatManager, Serializable
   }
 
   @Override public void removeListener(String event,
-      PropertyChangeSupport listener)
+      PropertyChangeListener listener)
   {
-
+    support.removePropertyChangeListener(event, listener);
   }
 }
